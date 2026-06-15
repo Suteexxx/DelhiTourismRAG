@@ -1,7 +1,7 @@
 import fitz
 
-def load_pdf(path):
-    doc = fitz.open(path)
+def load_pdf(pdf_path):
+    doc = fitz.open(pdf_path)
 
     pages = []
 
@@ -13,4 +13,4 @@ def load_pdf(path):
             "text": page.get_text()
         })
 
-    return pages 
+    return pages
